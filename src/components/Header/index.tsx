@@ -10,7 +10,7 @@ const Header = () => {
   const itens = useSelector((stete: RootReducer) => stete.carrinho.itens)
   const likes = useSelector((state: RootReducer) => state.favorito.likes)
 
-  const valorTotal = likes.reduce((acc, item) => {
+  const valorTotal = itens.reduce((acc, item) => {
     acc += item.preco
     return acc
   }, 0)
